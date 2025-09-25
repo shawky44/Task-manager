@@ -53,6 +53,44 @@ EMAIL_PASS=your-email-password
 ```bash
 npm run dev
 ```
+---
+## 📂 Project Structure
+.
+├── backend
+│   ├── controllers
+│   │   ├── authController.js        # Handles authentication logic (login, register, etc.)
+│   │   ├── reportController.js      # Handles report/export logic (Excel, etc.)
+│   │   ├── taskController.js        # Handles task CRUD operations
+│   │   └── userController.js        # Handles user CRUD operations
+│   │
+│   ├── middlewares
+│   │   ├── authMiddleware.js        # Auth middleware (JWT validation, etc.)
+│   │   ├── identification.js        # Custom identification logic
+│   │   ├── sendMail.js              # Utility for sending emails
+│   │   ├── uploadMiddleware.js      # File upload handling (Multer, etc.)
+│   │   └── validator.js             # Request validation middleware
+│   │
+│   ├── models
+│   │   ├── Task.js                  # Task schema/model
+│   │   └── User.js                  # User schema/model
+│   │
+│   ├── routes
+│   │   ├── authRoutes.js            # Auth routes (login, register, etc.)
+│   │   ├── reportRoutes.js          # Routes for generating/exporting reports
+│   │   ├── taskRoutes.js            # Routes for task management
+│   │   └── userRoutes.js            # Routes for user management
+│   │
+│   ├── uploads                      # Uploaded files (images, etc.)
+│   │   └── ... 
+│   │
+│   └── Utils
+│       └── hashing.js               # Password hashing utility
+│
+├── .env                             # Environment variables
+├── package.json                     # Project metadata & dependencies
+├── package-lock.json                # Dependency lock file
+├── server.js                        # Main server entry point
+└── README.md                        # Documentation
 
 ---
 
