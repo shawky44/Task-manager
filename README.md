@@ -58,10 +58,10 @@ npm run dev
 .
 ├── backend
 │   ├── controllers
-│   │   ├── authController.js        # Handles authentication logic (login, register, etc.)
-│   │   ├── reportController.js      # Handles report/export logic (Excel, etc.)
-│   │   ├── taskController.js        # Handles task CRUD operations
-│   │   └── userController.js        # Handles user CRUD operations
+│   │   ├── authController.js       
+│   │   ├── reportController.js     
+│   │   ├── taskController.js       
+│   │   └── userController.js        
 │   │
 │   ├── middlewares
 │   │   ├── authMiddleware.js        # Auth middleware (JWT validation, etc.)
