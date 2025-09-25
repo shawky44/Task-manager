@@ -220,7 +220,7 @@ Headers:
 
 ## 🧪 Testing  
 - Use **Postman** for API testing.  
-- Import the provided Postman Collection (`task-manager.postman_collection.json`).  
+- Import the provided Postman Collection (`Task Manager APIs.postman_collection.json`).  
 - Share the collection file with teammates so they can test the same routes.  
 
 ---
