@@ -55,13 +55,14 @@ npm run dev
 ```
 ---
 ## 📂 Project Structure
+```
 .
 ├── backend
 │   ├── controllers
-│   │   ├── authController.js       
-│   │   ├── reportController.js     
-│   │   ├── taskController.js       
-│   │   └── userController.js        
+│   │   ├── authController.js        # Handles authentication logic (login, register, etc.)
+│   │   ├── reportController.js      # Handles report/export logic (Excel, etc.)
+│   │   ├── taskController.js        # Handles task CRUD operations
+│   │   └── userController.js        # Handles user CRUD operations
 │   │
 │   ├── middlewares
 │   │   ├── authMiddleware.js        # Auth middleware (JWT validation, etc.)
@@ -92,6 +93,7 @@ npm run dev
 ├── server.js                        # Main server entry point
 └── README.md                        # Documentation
 
+```
 ---
 
 ## 📡 API Documentation  
