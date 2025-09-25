@@ -1,0 +1,1518 @@
+{
+	"info": {
+		"_postman_id": "37cd4f44-b09e-4ebd-b384-56bcb5cc16bc",
+		"name": "Task Manager APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46774899",
+		"_collection_link": "https://shawkymohamed-115003.postman.co/workspace/Shawky-Mohamed's-Workspace~8801222f-ca2c-44df-8d93-362f682a4559/collection/46774899-37cd4f44-b09e-4ebd-b384-56bcb5cc16bc?action=share&source=collection_link&creator=46774899"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"name\":\"nada haron\"\r\n     , \"profileImageUrl\":\"\"\r\n     , \"adminInviteToken\": \"\"\r\n     , \"email\":\"nadaharon@gmail.com\"\r\n     , \"password\":\"Nada@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"vhjbknb@gmail.com\",\r\n    \"password\":\"Shawky$2004\"\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/signin",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"vhjbknb@gmail.com\",\r\n    \"password\":\"Shawky$2004\"\r\n} ",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/auth/signin",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "Authorization=Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njg1MTkxLCJleHAiOjE3NTkyMDM1OTF9.uI_3DTYLOeaZiFkKTdtGwAMhqSGPz3_DnMU6IZEPOXw; Path=/; Expires=Wed, 24 Sep 2025 11:39:51 GMT; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "322"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"142-xM1YdbYkdfmyB9JOM0nX/a/MAzE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 03:39:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"name\": \"shawky\",\n    \"role\": \"admin\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njg1MTkxLCJleHAiOjE3NTkyMDM1OTF9.uI_3DTYLOeaZiFkKTdtGwAMhqSGPz3_DnMU6IZEPOXw\",\n    \"message\": \"logged in successfully\"\n}"
+						}
+					]
+				},
+				{
+					"name": "signout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"vhjbknb@gmail.com\",\r\n    \"password\":\"Shawky$2004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/signout",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NDkxNjQ2LCJleHAiOjE3NTkwMTAwNDZ9.Ai5SPbFuXj4pCDYnZmQ22r3ujoLb0jvDR6bIQt3tM8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/profile",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfileInfo",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NDkxMzgxLCJleHAiOjE3NTkwMDk3ODF9.1S-mVhQMGp_Fln2BuljuLPxPS5LZK0tmjbD_LM7m0M0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"shawky\",\r\n  \"image\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/profile",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendVerificationCode",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"vhjbknb@gmail.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/sendVerificationCode",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"sendVerificationCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyVerificationCode",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"vhjbknb@gmail.com\",\r\n  \"providedCode\": \"693050\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/verifyVerificationCode",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"verifyVerificationCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changePassword",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NDkwODAyLCJleHAiOjE3NTkwMDkyMDJ9.hL5z8K8rUek0E6HI87ztXiiKnggjLFt86WlF4CvNYy0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"oldPassword\":\"Shawky$2004\",\r\n  \"newPassword\":\"Shawky$2004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/changePassword",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"changePassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "verifyforgetPasswordCode",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n  \"email\":\"vhjbknb@gmail.com\",\r\n  \"providedCode\": \"270131\",\r\n  \"newPassword\":\"Shawky@2004\"\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/verifyforgetPasswordCode",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"verifyforgetPasswordCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendforgetPasswordCode",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\":\"vhjbknb@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/sendforgetPasswordCode",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"sendforgetPasswordCode"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-email",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NDkxMzgxLCJleHAiOjE3NTkwMDk3ODF9.1S-mVhQMGp_Fln2BuljuLPxPS5LZK0tmjbD_LM7m0M0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newEmail\":\"vhjbknb@gmail.com\",\r\n    \"password\":\"Shawky$2004\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/profile/update-email",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"profile",
+								"update-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-name-image",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NDkxNjQ2LCJleHAiOjE3NTkwMTAwNDZ9.Ai5SPbFuXj4pCDYnZmQ22r3ujoLb0jvDR6bIQt3tM8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"shawky\",\r\n    \"image\":\"http://localhost:3000/uploads/1758493218939-WIN_20250618_13_30_58_Pro.jpg\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/profile",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload-image",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NDkxNjQ2LCJleHAiOjE3NTkwMTAwNDZ9.Ai5SPbFuXj4pCDYnZmQ22r3ujoLb0jvDR6bIQt3tM8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/mobi lap/Pictures/Camera Roll/WIN_20250618_13_30_58_Pro.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/auth/upload-image",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"upload-image"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Management APIs",
+			"item": [
+				{
+					"name": "getAllUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NjU4NTQ3LCJleHAiOjE3NTkxNzY5NDd9._YmLhucG9tjlmrp1pwglD47AJ2a_HgnRc0Fe3maf2iA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/users",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NjU2NTUwLCJleHAiOjE3NTkxNzQ5NTB9.gHZr-Rl2XBdwWBByHw2AUmK-cnY5XG5IU9bHLPRBWps",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/users/68d042ab3fe6c3600b2168b1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"68d042ab3fe6c3600b2168b1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUserById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NjU4NTQ3LCJleHAiOjE3NTkxNzY5NDd9._YmLhucG9tjlmrp1pwglD47AJ2a_HgnRc0Fe3maf2iA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseURL}}/api/users/68d042ab3fe6c3600b2168b1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"68d042ab3fe6c3600b2168b1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tasks",
+			"item": [
+				{
+					"name": "Create Task",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njc3NDI2LCJleHAiOjE3NTkxOTU4MjZ9.QuIWFafsmzmmWfEfC961bTi1yH6bd15h4YJNqehVYn4",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"first task\",\r\n  \"description\": \"build a backend for a task manager website\",\r\n  \"priority\": \"High\",\r\n  \"dueDate\": \"2025-09-24\",\r\n  \"assignedTo\": [\"68d3050b6dd16e7c8f4e65e2\"], \r\n  \"attachments\": \"\",\r\n  \"todoChecklist\": [\r\n    {\r\n      \"text\": \"brainstorm for the ideas that you will need to implement\",\r\n      \"completed\": false\r\n    },\r\n    {\r\n      \"text\": \"start building your application\",\r\n      \"completed\": false\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/tasks",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Task",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njc3NDI2LCJleHAiOjE3NTkxOTU4MjZ9.QuIWFafsmzmmWfEfC961bTi1yH6bd15h4YJNqehVYn4",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"studying\",\r\n  \"description\": \" 2 hours per day\",\r\n  \"priority\": \"High\",\r\n  \"dueDate\": \"2023-01-25\",\r\n  \"assignedTo\": [\"68d3050b6dd16e7c8f4e65e2\"], \r\n  \"attachments\": \"\",\r\n  \"todoChecklist\": [\r\n    {\r\n      \"text\": \" finish Chapter one magnetic fields\",\r\n      \"completed\": false\r\n    },\r\n    {\r\n      \"text\": \"start the project\",\r\n      \"completed\": false\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/tasks",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"tasks"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "534"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"216-wQoYmlMz19Asvp4oknnrRcpDRTs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 22:41:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Taske has been created successfully\",\n    \"task\": {\n        \"title\": \"studying\",\n        \"description\": \" 2 hours per day\",\n        \"priority\": \"High\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2023-01-25T00:00:00.000Z\",\n        \"assignedTo\": [\n            \"68d3050b6dd16e7c8f4e65e2\"\n        ],\n        \"createdBy\": \"68d045753fe6c3600b2168bc\",\n        \"attachments\": [\n            \"\"\n        ],\n        \"todoChecklist\": [\n            {\n                \"text\": \" finish Chapter one magnetic fields\",\n                \"completed\": false,\n                \"_id\": \"68d473a18acee611c15f6f1e\"\n            },\n            {\n                \"text\": \"start the project\",\n                \"completed\": false,\n                \"_id\": \"68d473a18acee611c15f6f1f\"\n            }\n        ],\n        \"progress\": 0,\n        \"_id\": \"68d473a18acee611c15f6f1d\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Tasks",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njc3NDI2LCJleHAiOjE3NTkxOTU4MjZ9.QuIWFafsmzmmWfEfC961bTi1yH6bd15h4YJNqehVYn4",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"first task\",\r\n  \"description\": \"build a backend for a task manager website\",\r\n  \"priority\": \"High\",\r\n  \"dueDate\": \"2025-09-24\",\r\n  \"assignedTo\": [\"68d3050b6dd16e7c8f4e65e2\"], \r\n  \"attachments\": \"\",\r\n  \"todoChecklist\": [\r\n    {\r\n      \"text\": \"brainstorm for the ideas that you will need to implement\",\r\n      \"completed\": false\r\n    },\r\n    {\r\n      \"text\": \"start building your application\",\r\n      \"completed\": false\r\n    }\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/tasks",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Tasks",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njc3NDI2LCJleHAiOjE3NTkxOTU4MjZ9.QuIWFafsmzmmWfEfC961bTi1yH6bd15h4YJNqehVYn4",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"first task\",\r\n  \"description\": \"build a backend for a task manager website\",\r\n  \"priority\": \"High\",\r\n  \"dueDate\": \"2025-09-24\",\r\n  \"assignedTo\": [\"68d3050b6dd16e7c8f4e65e2\"], \r\n  \"attachments\": \"\",\r\n  \"todoChecklist\": [\r\n    {\r\n      \"text\": \"brainstorm for the ideas that you will need to implement\",\r\n      \"completed\": false\r\n    },\r\n    {\r\n      \"text\": \"start building your application\",\r\n      \"completed\": false\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/tasks",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"tasks"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "736"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e0-EaaY3xTvcGmfuksqUHCJMavNw+Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 04:18:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"tasks\": [\n        {\n            \"_id\": \"68d34af0ead6c874d5843317\",\n            \"title\": \"first task\",\n            \"description\": \"build a backend for a task manager website\",\n            \"priority\": \"High\",\n            \"status\": \"Pending\",\n            \"dueDate\": \"2025-09-24T00:00:00.000Z\",\n            \"assignedTo\": [\n                {\n                    \"_id\": \"68d3050b6dd16e7c8f4e65e2\",\n                    \"name\": \"nada haron\",\n                    \"email\": \"nadaharon@gmail.com\",\n                    \"profileImageUrl\": \"\"\n                }\n            ],\n            \"createdBy\": \"68d045753fe6c3600b2168bc\",\n            \"attachments\": [\n                \"\"\n            ],\n            \"todoChecklist\": [\n                {\n                    \"text\": \"brainstorm for the ideas that you will need to implement\",\n                    \"completed\": false,\n                    \"_id\": \"68d34af0ead6c874d5843318\"\n                },\n                {\n                    \"text\": \"start building your application\",\n                    \"completed\": false,\n                    \"_id\": \"68d34af0ead6c874d5843319\"\n                }\n            ],\n            \"progress\": 0,\n            \"__v\": 0,\n            \"completedTodoCount\": 0\n        }\n    ],\n    \"statussummary\": {\n        \"all\": 1,\n        \"pendingTasks\": 1,\n        \"inProgressTasks\": 0,\n        \"completedTasks\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Task By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get Task By Id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njg1MTkxLCJleHAiOjE3NTkyMDM1OTF9.uI_3DTYLOeaZiFkKTdtGwAMhqSGPz3_DnMU6IZEPOXw",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"first task\",\r\n  \"description\": \"build a backend for a task manager website\",\r\n  \"priority\": \"High\",\r\n  \"dueDate\": \"2025-09-24\",\r\n  \"assignedTo\": [\"68d3050b6dd16e7c8f4e65e2\"], \r\n  \"attachments\": \"\",\r\n  \"todoChecklist\": [\r\n    {\r\n      \"text\": \"brainstorm for the ideas that you will need to implement\",\r\n      \"completed\": false\r\n    },\r\n    {\r\n      \"text\": \"start building your application\",\r\n      \"completed\": false\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/tasks/68d34b82ead6c874d584331c",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"tasks",
+										"68d34b82ead6c874d584331c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "619"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26b-66lx/OBhqbG0EvjXKopZxKsLoic\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 03:46:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"68d34b82ead6c874d584331c\",\n    \"title\": \"first task\",\n    \"description\": \"build a backend for a task manager website\",\n    \"priority\": \"High\",\n    \"status\": \"Pending\",\n    \"dueDate\": \"2025-09-24T00:00:00.000Z\",\n    \"assignedTo\": [\n        {\n            \"_id\": \"68d3050b6dd16e7c8f4e65e2\",\n            \"name\": \"nada haron\",\n            \"email\": \"nadaharon@gmail.com\",\n            \"profileImageUrl\": \"\"\n        }\n    ],\n    \"createdBy\": \"68d045753fe6c3600b2168bc\",\n    \"attachments\": [\n        \"\"\n    ],\n    \"todoChecklist\": [\n        {\n            \"text\": \"brainstorm for the ideas that you will need to implement\",\n            \"completed\": false,\n            \"_id\": \"68d34b82ead6c874d584331d\"\n        },\n        {\n            \"text\": \"start building your application\",\n            \"completed\": false,\n            \"_id\": \"68d34b82ead6c874d584331e\"\n        }\n    ],\n    \"progress\": 0,\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "update Task By Id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njg1MTkxLCJleHAiOjE3NTkyMDM1OTF9.uI_3DTYLOeaZiFkKTdtGwAMhqSGPz3_DnMU6IZEPOXw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"title\": \"sec task\",\r\n            \"description\": \"build a backend for a task manager website\",\r\n            \"priority\": \"High\",\r\n            \"status\": \"Pending\",\r\n            \"dueDate\": \"2025-03-24T00:00:00.000Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/tasks/68d34b82ead6c874d584331c",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"68d34b82ead6c874d584331c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njg1MTkxLCJleHAiOjE3NTkyMDM1OTF9.uI_3DTYLOeaZiFkKTdtGwAMhqSGPz3_DnMU6IZEPOXw",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"title\": \"sec task\",\r\n            \"description\": \"build a backend for a task manager website\",\r\n            \"priority\": \"High\",\r\n            \"status\": \"Pending\",\r\n            \"dueDate\": \"2025-03-24T00:00:00.000Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/tasks/68d34b82ead6c874d584331c",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"tasks",
+										"68d34b82ead6c874d584331c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "592"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"250-oMVOfQ+3z/mn/4FRRc1q6UA15kc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 04:05:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task updated successfully\",\n    \"updatedTask\": {\n        \"_id\": \"68d34b82ead6c874d584331c\",\n        \"title\": \"sec task\",\n        \"description\": \"build a backend for a task manager website\",\n        \"priority\": \"High\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2025-03-24T00:00:00.000Z\",\n        \"assignedTo\": [\n            \"68d3050b6dd16e7c8f4e65e2\"\n        ],\n        \"createdBy\": \"68d045753fe6c3600b2168bc\",\n        \"attachments\": [\n            \"\"\n        ],\n        \"todoChecklist\": [\n            {\n                \"text\": \"brainstorm for the ideas that you will need to implement\",\n                \"completed\": false,\n                \"_id\": \"68d34b82ead6c874d584331d\"\n            },\n            {\n                \"text\": \"start building your application\",\n                \"completed\": false,\n                \"_id\": \"68d34b82ead6c874d584331e\"\n            }\n        ],\n        \"progress\": 0,\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "delete task",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njg1MTkxLCJleHAiOjE3NTkyMDM1OTF9.uI_3DTYLOeaZiFkKTdtGwAMhqSGPz3_DnMU6IZEPOXw",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"title\": \"sec task\",\r\n            \"description\": \"build a backend for a task manager website\",\r\n            \"priority\": \"High\",\r\n            \"status\": \"Pending\",\r\n            \"dueDate\": \"2025-03-24T00:00:00.000Z\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/tasks/68d34b82ead6c874d584331c",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"68d34b82ead6c874d584331c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update status",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njc3NDI2LCJleHAiOjE3NTkxOTU4MjZ9.QuIWFafsmzmmWfEfC961bTi1yH6bd15h4YJNqehVYn4",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"Pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/tasks/68d34af0ead6c874d5843317/status",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"68d34af0ead6c874d5843317",
+								"status"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update status",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njc3NDI2LCJleHAiOjE3NTkxOTU4MjZ9.QuIWFafsmzmmWfEfC961bTi1yH6bd15h4YJNqehVYn4",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"status\":\"Pending\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/tasks/68d34af0ead6c874d5843317/status",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"tasks",
+										"68d34af0ead6c874d5843317",
+										"status"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "594"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"252-5c90Tb/RIbzZqHkM0vPBy92/3eM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 24 Sep 2025 23:23:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task status updated successfully\",\n    \"task\": {\n        \"_id\": \"68d34af0ead6c874d5843317\",\n        \"title\": \"first task\",\n        \"description\": \"build a backend for a task manager website\",\n        \"priority\": \"High\",\n        \"status\": \"Pending\",\n        \"dueDate\": \"2025-09-24T00:00:00.000Z\",\n        \"assignedTo\": [\n            \"68d3050b6dd16e7c8f4e65e2\"\n        ],\n        \"createdBy\": \"68d045753fe6c3600b2168bc\",\n        \"attachments\": [\n            \"\"\n        ],\n        \"todoChecklist\": [\n            {\n                \"text\": \"brainstorm for the ideas that you will need to implement\",\n                \"completed\": false,\n                \"_id\": \"68d34af0ead6c874d5843318\"\n            },\n            {\n                \"text\": \"start building your application\",\n                \"completed\": false,\n                \"_id\": \"68d34af0ead6c874d5843319\"\n            }\n        ],\n        \"progress\": 0,\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update task Checklist",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NzU4NDA5LCJleHAiOjE3NTkyNzY4MDl9.8MRytc55kMMmVLE3ot0a04IykBr0umX0ghUxqPNkmOY",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"todoCheckList\":[\r\n                {\r\n                    \"text\": \"brainstorm for the ideas that you will need to implement\",\r\n                    \"completed\": true,\r\n                    \"_id\": \"68d34af0ead6c874d5843318\"\r\n                },\r\n                {\r\n                    \"text\": \"start building your application\",\r\n                    \"completed\": false,\r\n                    \"_id\": \"68d34af0ead6c874d5843319\"\r\n                }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/tasks/68d34af0ead6c874d5843317/todo",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"68d34af0ead6c874d5843317",
+								"todo"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update task Checklist",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NzU4NDA5LCJleHAiOjE3NTkyNzY4MDl9.8MRytc55kMMmVLE3ot0a04IykBr0umX0ghUxqPNkmOY",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"todoCheckList\":[\r\n                {\r\n                    \"text\": \"brainstorm for the ideas that you will need to implement\",\r\n                    \"completed\": true,\r\n                    \"_id\": \"68d34af0ead6c874d5843318\"\r\n                },\r\n                {\r\n                    \"text\": \"start building your application\",\r\n                    \"completed\": false,\r\n                    \"_id\": \"68d34af0ead6c874d5843319\"\r\n                }]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/tasks/68d34af0ead6c874d5843317/todo",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"tasks",
+										"68d34af0ead6c874d5843317",
+										"todo"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "667"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29b-B2Fl/Ic9sNPnAOFLG34gcpkIzfM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Sep 2025 00:06:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Task checklist updated\",\n    \"task\": {\n        \"_id\": \"68d34af0ead6c874d5843317\",\n        \"title\": \"first task\",\n        \"description\": \"build a backend for a task manager website\",\n        \"priority\": \"High\",\n        \"status\": \"In Progress\",\n        \"dueDate\": \"2025-09-24T00:00:00.000Z\",\n        \"assignedTo\": [\n            {\n                \"_id\": \"68d3050b6dd16e7c8f4e65e2\",\n                \"name\": \"nada haron\",\n                \"email\": \"nadaharon@gmail.com\",\n                \"profileImageUrl\": \"\"\n            }\n        ],\n        \"createdBy\": \"68d045753fe6c3600b2168bc\",\n        \"attachments\": [\n            \"\"\n        ],\n        \"todoChecklist\": [\n            {\n                \"text\": \"brainstorm for the ideas that you will need to implement\",\n                \"completed\": true,\n                \"_id\": \"68d34af0ead6c874d5843318\"\n            },\n            {\n                \"text\": \"start building your application\",\n                \"completed\": false,\n                \"_id\": \"68d34af0ead6c874d5843319\"\n            }\n        ],\n        \"progress\": 50,\n        \"__v\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Dashboard Data",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NzU5NjgyLCJleHAiOjE3NTkyNzgwODJ9.tdz-k6kAuasaXuC1ClsUrrX_gCZ6iyP2PstLM8UVhMs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"vhjbknb@gmail.com\",\r\n    \"password\":\"Shawky$2004\"\r\n} "
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/tasks/dashboard-data",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"dashboard-data"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Dashboard Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4NzU5NjgyLCJleHAiOjE3NTkyNzgwODJ9.tdz-k6kAuasaXuC1ClsUrrX_gCZ6iyP2PstLM8UVhMs",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"vhjbknb@gmail.com\",\r\n    \"password\":\"Shawky$2004\"\r\n} "
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/tasks/dashboard-data",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"tasks",
+										"dashboard-data"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "769"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"301-vZ9L87+cSKtualEcpflZrvhkakg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Sep 2025 01:43:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statistics\": {\n        \"allTasks\": 4,\n        \"PendingTasks\": 3,\n        \"CompletedTasks\": 0,\n        \"overdueTasks\": 4\n    },\n    \"charts\": {\n        \"taskDistribution\": {\n            \"Pending\": 3,\n            \"InProgress\": 1,\n            \"Completed\": 0,\n            \"All\": 4\n        },\n        \"taskPriorityLevels\": {\n            \"Pending\": 0,\n            \"In Progress\": 0,\n            \"Completed\": 0\n        }\n    },\n    \"recentTasks\": [\n        {\n            \"_id\": \"68d34af0ead6c874d5843317\",\n            \"title\": \"first task\",\n            \"priority\": \"High\",\n            \"status\": \"In Progress\",\n            \"dueDate\": \"2025-09-24T00:00:00.000Z\"\n        },\n        {\n            \"_id\": \"68d471e18acee611c15f6f13\",\n            \"title\": \"important one\",\n            \"priority\": \"High\",\n            \"status\": \"Pending\",\n            \"dueDate\": \"2025-09-24T00:00:00.000Z\"\n        },\n        {\n            \"_id\": \"68d473338acee611c15f6f18\",\n            \"title\": \"fucken uni \",\n            \"priority\": \"Low\",\n            \"status\": \"Pending\",\n            \"dueDate\": \"2025-09-25T00:00:00.000Z\"\n        },\n        {\n            \"_id\": \"68d473a18acee611c15f6f1d\",\n            \"title\": \"studying\",\n            \"priority\": \"High\",\n            \"status\": \"Pending\",\n            \"dueDate\": \"2023-01-25T00:00:00.000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "User Dashboard Data",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "User Dashboard Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ZDA0NTc1M2ZlNmMzNjAwYjIxNjhiYyIsImVtYWlsIjoidmhqYmtuYkBnbWFpbC5jb20iLCJ2ZXJpZmllZCI6dHJ1ZSwiaWF0IjoxNzU4Njc3NDI2LCJleHAiOjE3NTkxOTU4MjZ9.QuIWFafsmzmmWfEfC961bTi1yH6bd15h4YJNqehVYn4",
+										"type": "text"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"title\": \"first task\",\r\n  \"description\": \"build a backend for a task manager website\",\r\n  \"priority\": \"High\",\r\n  \"dueDate\": \"2025-09-24\",\r\n  \"assignedTo\": [\"68d3050b6dd16e7c8f4e65e2\"], \r\n  \"attachments\": \"\",\r\n  \"todoChecklist\": [\r\n    {\r\n      \"text\": \"brainstorm for the ideas that you will need to implement\",\r\n      \"completed\": false\r\n    },\r\n    {\r\n      \"text\": \"start building your application\",\r\n      \"completed\": false\r\n    }\r\n  ]\r\n}"
+								},
+								"url": {
+									"raw": "{{baseURL}}/api/tasks/user-dashboard-data",
+									"host": [
+										"{{baseURL}}"
+									],
+									"path": [
+										"api",
+										"tasks",
+										"user-dashboard-data"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "232"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e8-FAEjahQtBlAuP0K/E8WnlZufRrI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 25 Sep 2025 01:50:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statistics\": {\n        \"allTasks\": 0,\n        \"PendingTasks\": 0,\n        \"CompletedTasks\": 0,\n        \"overdueTasks\": 0\n    },\n    \"charts\": {\n        \"taskDistribution\": {\n            \"Pending\": 0,\n            \"In Progress\": 0,\n            \"Completed\": 0,\n            \"All\": 0\n        },\n        \"taskPriorityLevels\": {\n            \"Low\": 0,\n            \"Medium\": 0,\n            \"High\": 0\n        }\n    },\n    \"recentTasks\": []\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "export tasks/users",
+			"item": [
+				{
+					"name": "exportUsersReport",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "exportTasksReport",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:3000",
+			"type": "default"
+		},
+		{
+			"key": "acc",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
