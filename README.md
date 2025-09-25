@@ -228,4 +228,15 @@ Headers:
 ## 🚀 Future Improvements  
 - Real-time notifications with Socket.io  
 - Export reports to PDF  
-- Advanced filtering and search for tasks  
+- Advanced filtering and search for tasks
+
+---
+
+- ## 👨‍💻 Author
+
+Created by **Shawky ✨**
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
